@@ -103,9 +103,6 @@ export async function viewAllUsers (req, res) {
 
 // Sign In
 export async function signIn (req, res) {
-  // Get a user with the email address
-  // Ensure that their password is correct
-  // Create a JWT for them. (For Authenticating Other API Requests)
   try {
     const user = await User.findOne({ where: { emailAddress: req.body.emailAddress } })
     if (!user) {
